@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Community Blood Support</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HOME PAGE -->
+    <div id="home">
+        <h1>🩸 Community Blood Support</h1>
+        <p>Connecting lives, one drop at a time</p>
+
+        <button onclick="showDonation()">Blood Donation</button>
+        <button onclick="showNeed()">Blood Need</button>
+    </div>
+
+    <!-- DONATION FORM -->
+    <div id="donationForm" class="hidden">
+        <h2>Blood Donation Registration</h2>
+
+        <input type="text" id="donorName" placeholder="Full Name">
+        <input type="text" id="donorBlood" placeholder="Blood Group (e.g. A+)">
+        <input type="tel" id="donorMobile" placeholder="Mobile Number">
+        <input type="text" id="donorDistrict" placeholder="District">
+
+        <label class="radio">
+            <input type="radio" name="previous" value="Yes" onclick="toggleDate(true)"> Previously Donated
+        </label>
+        <label class="radio">
+            <input type="radio" name="previous" value="No" onclick="toggleDate(false)"> First Time Donor
+        </label>
+
+        <input type="date" id="donationDate" class="hidden">
+
+        <button onclick="registerDonor()">Register</button>
+        <button class="secondary" onclick="goHome()">Back</button>
+    </div>
+
+    <!-- BLOOD NEED FORM -->
+    <div id="needForm" class="hidden">
+        <h2>Find Blood Donors</h2>
+
+        <input type="text" id="searchBlood" placeholder="Required Blood Group">
+        <input type="text" id="searchDistrict" placeholder="District">
+
+        <button onclick="searchDonors()">Search</button>
+        <button class="secondary" onclick="goHome()">Back</button>
+
+        <div id="results"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
