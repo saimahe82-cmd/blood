@@ -1,67 +1,75 @@
-body {
+* {
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
-  background: #f5f6fa;
-  padding: 20px;
 }
 
-h1 {
-  text-align: center;
-  color: #b00020;
+body {
+  background: linear-gradient(to right, #ff4b4b, #ff9a9a);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-form, .search, #donorList {
+.container {
   background: #fff;
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 20px;
+  padding: 25px;
+  width: 90%;
+  max-width: 420px;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
 }
 
-h2 {
-  margin-bottom: 10px;
-  color: #333;
+h1, h2 {
+  color: #c40000;
 }
 
-label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
+p {
+  color: #555;
 }
 
-input, select {
+input {
   width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border-radius: 6px;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
   border: 1px solid #ccc;
 }
 
 button {
   width: 100%;
-  margin-top: 15px;
   padding: 10px;
-  background: #b00020;
+  margin-top: 10px;
+  background: #c40000;
   color: white;
   border: none;
-  border-radius: 6px;
-  font-size: 16px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background: #d32f2f;
+  background: #a30000;
+}
+
+.secondary {
+  background: #777;
+}
+
+.secondary:hover {
+  background: #555;
+}
+
+.hidden {
+  display: none;
+}
+
+#results {
+  margin-top: 15px;
+  text-align: left;
 }
 
 .donor {
-  border-bottom: 1px solid #eee;
-  padding: 10px 0;
-}
-
-.inactive {
-  opacity: 0.5;
-}
-
-#previousDateGroup {
-  display: none;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
