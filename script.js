@@ -1,19 +1,32 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
-import { getFirestore, collection, addDoc, query, where, getDocs, serverTimestamp }
-from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  query,
+  where,
+  serverTimestamp,
+  enableIndexedDbPersistence
+} from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
 
 /* 🔥 FIREBASE CONFIG */
 const firebaseConfig = {
   apiKey: "AIzaSyBmxir3BhXwb78OywXR2UJYl-GVhAnV-mM",
   authDomain: "blood-3d815.firebaseapp.com",
   projectId: "blood-3d815",
-  storageBucket: "blood-3d815.firebasestorage.app",
+  storageBucket: "blood-3d815.appspot.com",
   messagingSenderId: "1009580408362",
   appId: "1:1009580408362:web:e5dbaf68260c9736f00d53"
 };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+
+/* 🔒 OFFLINE + REFRESH SAFE */
+enableIndexedDbPersistence(db).catch(() => {
+  console.log("Offline persistence already enabled");
+});
 
 /* ELEMENTS */
 const home = document.getElementById("home");
@@ -56,6 +69,8 @@ window.registerDonor = async () => {
     blood: donorBlood.value.toUpperCase(),
     mobile: donorMobile.value,
     district: donorDistrict.value.toLowerCase(),
+    donatedBefore: document.querySelector('input[name="prev"]:checked')?.nextSibling?.textContent || "No",
+    date: donationDate.value || "First Time",
     createdAt: serverTimestamp()
   });
 
