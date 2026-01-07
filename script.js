@@ -67,4 +67,15 @@ function searchDonor() {
       </div>
     `;
   });
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBmxir3BhXwb78OywXR2UJYl-GVhAnV-mM",
+  authDomain: "blood-3d815.firebaseapp.com",
+  projectId: "blood-3d815",
+  storageBucket: "blood-3d815.firebasestorage.app",
+  messagingSenderId: "1009580408362",
+  appId: "1:1009580408362:web:e5dbaf68260c9736f00d53",
+  measurementId: "G-668XKXD5SJ"
+};
 }
+
