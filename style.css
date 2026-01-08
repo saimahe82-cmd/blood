@@ -13,15 +13,15 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .container {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
   padding: 25px;
   width: 90%;
-  max-width: 4
-
-  20px;
+  max-width: 420px;
   border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
   text-align: center;
 }
 
@@ -77,4 +77,5 @@ button:hover {
   padding: 10px;
   border-bottom: 1px solid #ddd;
 }
+
 
