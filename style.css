@@ -2,20 +2,24 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-
 body {
-  background: linear-gradient(to right, #ff4b4b, #ff9a9a);
+  background-image: url("https://image1.jdomni.in/preview-theme/7/3/4/28bdf23b-755a-4f5a-8b7d-e1ef3d5f7098.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .container {
   background: #fff;
   padding: 25px;
   width: 90%;
-  max-width: 420px;
+  max-width: 4
+
+  20px;
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   text-align: center;
@@ -73,3 +77,4 @@ button:hover {
   padding: 10px;
   border-bottom: 1px solid #ddd;
 }
+
